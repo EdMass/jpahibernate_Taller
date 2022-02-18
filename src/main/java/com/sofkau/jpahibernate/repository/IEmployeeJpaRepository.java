@@ -1,8 +1,14 @@
 package com.sofkau.jpahibernate.repository;
 
 import com.sofkau.jpahibernate.models.Employee;
+import com.sofkau.jpahibernate.models.Role;
+import org.springframework.data.domain.Example;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.query.FluentQuery;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
+import java.util.function.Function;
 
 @Repository
 public interface IEmployeeJpaRepository extends JpaRepository<Employee, Long> {

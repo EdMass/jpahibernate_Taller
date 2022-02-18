@@ -1,7 +1,6 @@
 package com.sofkau.jpahibernate;
 
 import com.sofkau.jpahibernate.models.Employee;
-import com.sofkau.jpahibernate.models.Project;
 import com.sofkau.jpahibernate.models.Role;
 import com.sofkau.jpahibernate.repository.IEmployeeJpaRepository;
 import com.sofkau.jpahibernate.repository.IProjectJpaRepository;

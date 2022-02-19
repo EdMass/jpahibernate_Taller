@@ -35,13 +35,9 @@ public class Employee {
         return projects;
     }
 
-
-
     public void setProjects(List<Project> projects) {
         this.projects = projects;
     }
-
-
 
     public Role getRole() {
         return role;

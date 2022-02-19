@@ -43,7 +43,7 @@ public class EmployeeServices {
             _employee.setFirstname(employee.getFirstname());
             _employee.setLastname(employee.getLastname());
             _employee.setEmployeeid(employee.getEmployeeid());
-            //_employee.setRole(employee.getRole());
+            _employee.setRole(employee.getRole());
             iEmployeeJpaRepository.save(_employee);
             return "El empleado ha sido actualizado";
         }else return "No se ha encontrado el empleado";

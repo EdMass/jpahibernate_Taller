@@ -1,7 +1,6 @@
 package com.sofkau.jpahibernate.controllers;
 
 import com.sofkau.jpahibernate.models.Employee;
-import com.sofkau.jpahibernate.models.Role;
 import com.sofkau.jpahibernate.services.EmployeeServices;
 import com.sofkau.jpahibernate.services.RoleServices;
 import org.springframework.beans.factory.annotation.Autowired;

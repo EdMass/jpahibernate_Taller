@@ -21,8 +21,7 @@ public class Employee {
     @Column(length = 10, nullable = false, unique = true)
     private String employeeid;
 
-
-    @ManyToOne(optional = false)
+    @ManyToOne(optional = true)
     @JoinColumn(name = "id_role")
     private Role role;
 
@@ -36,9 +35,13 @@ public class Employee {
         return projects;
     }
 
+
+
     public void setProjects(List<Project> projects) {
         this.projects = projects;
     }
+
+
 
     public Role getRole() {
         return role;
@@ -52,7 +55,6 @@ public class Employee {
         this.lastname = lastname;
         this.employeeid = employeeid;
         this.role = role;
-
     }
 
     public long getId() {
@@ -85,6 +87,10 @@ public class Employee {
 
     public void setEmployeeid(String employeeid) {
         this.employeeid = employeeid;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
     }
 
     @Override

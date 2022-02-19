@@ -35,7 +35,14 @@ public class RoleServices {
         }
     }
 
-    public void updateRole(Role role){
-         iRoleJpaRepository.save(role);
+    public String updateRole(Role role, Long id) {
+        Optional<Role> roleData = iRoleJpaRepository.findById(id);
+
+        if (roleData.isPresent()) {
+            Role _role = roleData.get();
+            _role.setName(role.getName());
+             iRoleJpaRepository.save(_role);
+             return "El rol ha sido actualizado";
+        }else return "No se ha encontrado el rol";
     }
 }

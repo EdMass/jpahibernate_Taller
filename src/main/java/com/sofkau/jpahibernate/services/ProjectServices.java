@@ -1,6 +1,7 @@
 package com.sofkau.jpahibernate.services;
 
 import com.sofkau.jpahibernate.models.Project;
+import com.sofkau.jpahibernate.models.Role;
 import com.sofkau.jpahibernate.repository.IProjectJpaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -34,8 +35,15 @@ public class ProjectServices {
         }
     }
 
-    public void updateProject(Project project){
-        iProjectJpaRepository.save(project);
+    public String updateProject(Project project, Long id) {
+        Optional<Project> projectData = iProjectJpaRepository.findById(id);
+
+        if (projectData.isPresent()) {
+            Project _project = projectData.get();
+            _project.setName(project.getName());
+            iProjectJpaRepository.save(_project);
+            return "El proyecto ha sido actualizado";
+        }else return "No se ha encontrado el proyecto";
     }
 }
 

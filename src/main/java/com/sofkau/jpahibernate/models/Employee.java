@@ -109,6 +109,6 @@ public class Employee {
                 ", fristname='" + firstname + '\'' +
                 ", lastname='" + lastname + '\'' +
                 ", employeeid='" + employeeid + '\'' +
-                '}';
+                ", role="+role.getName()+'}';
     }
 }

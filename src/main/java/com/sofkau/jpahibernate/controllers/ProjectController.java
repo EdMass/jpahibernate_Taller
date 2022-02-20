@@ -1,7 +1,6 @@
 package com.sofkau.jpahibernate.controllers;
 
 import com.sofkau.jpahibernate.models.Project;
-import com.sofkau.jpahibernate.models.Role;
 import com.sofkau.jpahibernate.services.ProjectServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -39,9 +38,9 @@ public class ProjectController {
     public String deleteProjectById(@PathVariable("id") Long id){
         boolean ok = this.projectServices.deleteProject(id);
         if (ok){
-            return  "se elliminó el Role con id "+ id;
+            return  "se elliminó el proyecto con id "+ id;
         }else{
-            return "No se pudo eliminar el Role con id "+id;
+            return "No se pudo eliminar el proyecto con id "+id;
         }
     }
 }

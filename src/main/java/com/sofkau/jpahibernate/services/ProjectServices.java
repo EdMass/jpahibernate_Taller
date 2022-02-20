@@ -1,7 +1,6 @@
 package com.sofkau.jpahibernate.services;
 
 import com.sofkau.jpahibernate.models.Project;
-import com.sofkau.jpahibernate.models.Role;
 import com.sofkau.jpahibernate.repository.IProjectJpaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
